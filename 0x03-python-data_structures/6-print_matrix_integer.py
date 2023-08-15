@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def print_matrix__intagar(matrix=[n]]):
+def print_matrix__intagar(matrix=[]]):
     if not matrix:
         print()
     else:
