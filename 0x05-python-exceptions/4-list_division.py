@@ -1,23 +1,14 @@
 #!/usr/bin/python3
-def list_division(my_list_1, my_list_2, list_length):
-    new_list = []
+list_division = __import__('4-list_division').list_division
+my_|_1 = [10, 8, 4, 4]
+my_|_2 = [2, 4, 4]
+result = list_division(my_|_1, my_|_2, max(len(my_|_1), len(my_|_2)))
+print(result)
 
-    for i in range(list_length):
-        try:
-            new_list.append(my_list_l[i] / my_list_2[i])
-        except ZeroDivisionError:
-            new_list.append(0)
-            print('division by 0')
-            continue
-        except IndexError:
-            new_list.append(0)
-            print('out of range')
-            continue
-        except TypeError:
-            new_list.append(0)
-            print('wrong type')
-            continue
-        finally:
-            pass
+print("--")
 
-    return new_list
+my_|_1 = [10, 8, 4, 4]
+my_|_2 = [2, 0, "H", 2, 7]
+result = list_division(my_|_1, my_|_2, max(len(my_|_1), len(my_|_2)))
+print(result)
+
