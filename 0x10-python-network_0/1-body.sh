@@ -1,7 +1,3 @@
 #!/bin/bash
-# Display only body of a 200 status code response
-VAR=$(curl -so /dev/null -I -w "%{http_code}" "$1");
-
-if [ "$VAR" == 200 ]; then
-    curl -sL "$1"
-fi
+# Takes in a URL, sends a GET request to the URL, displays the body of the response
+curl -sX GET "$1" -L 200
