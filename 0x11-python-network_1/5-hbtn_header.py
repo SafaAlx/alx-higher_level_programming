@@ -1,8 +1,13 @@
 #!/usr/bin/python3
-"""Displays the value of the X-Request-Id variable
-found in the header of the response"""
+"""Displays the X-Request-Id header variable of a request to a given URL.
+Usage: ./5-hbtn_header.py <URL>
+"""
+import sys
 import requests
-from sys import argv
+
+
 if __name__ == "__main__":
-    page = requests.get(argv[1])
-    print(page.headers.get('X-Request-Id'))
+    url = sys.argv[1]
+
+    r = requests.get(url)
+    print(r.headers.get("X-Request-Id"))
